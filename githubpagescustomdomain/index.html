@@ -3,17 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Why I&#39;m moving from Wordpress to Hugo &middot; </title>
-        <meta name="description" content="The reasoning behind my switch from Wordpress/Bluehost to Hugo/Github pages.">
+        <title>Setting up a Github Pages custom domain &middot; </title>
+        <meta name="description" content="How to configure your Github Pages site to use a custom domain.">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.74.3" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Why I&#39;m moving from Wordpress to Hugo">
-<meta property="og:description" content="The reasoning behind my switch from Wordpress/Bluehost to Hugo/Github pages.">
+        <meta property="og:title" content="Setting up a Github Pages custom domain">
+<meta property="og:description" content="How to configure your Github Pages site to use a custom domain.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="/wordpresstohugo/">
+<meta property="og:url" content="/githubpagescustomdomain/">
         <link rel="stylesheet" href="/dist/site.css">
         <link rel="stylesheet" href="/dist/syntax.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
@@ -65,16 +65,16 @@
 <div class="container">
     <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Why I&#39;m moving from Wordpress to Hugo</h1>
+    <h1 class="post-title" itemprop="name headline">Setting up a Github Pages custom domain</h1>
     
-        <p class="post-description" itemprop="description">The reasoning behind my switch from Wordpress/Bluehost to Hugo/Github pages.</p>
+        <p class="post-description" itemprop="description">How to configure your Github Pages site to use a custom domain.</p>
     
     <p class="post-date post-line">
-        <span>Published <time datetime="2020-08-19" itemprop="datePublished">Wed, Aug 19, 2020</time></span>
+        <span>Published <time datetime="2020-08-20" itemprop="datePublished">Thu, Aug 20, 2020</time></span>
         <span>by</span>
         <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
             <span itemprop="name">
-                <a href="#" itemprop="url" rel="author"></a>
+                <a href="#" itemprop="url" rel="author">Austin Repp</a>
             </span>
         </span>
     </p>
@@ -84,21 +84,14 @@
         <div class="post-content clearfix" itemprop="articleBody">
     
 
-    <h1 id="why-move-from-wordpress-to-hugo">Why move from Wordpress to Hugo?</h1>
-<p>I created a Wordpress site on Bluehost for my personal/blog site because I thought it would be the easiest way to publish blogs without having to worry about hosting or creating my own site. Even as a developer, I have no interest in spending too much time reinventing the wheel to create a simple blog. After writing just one entry there, I wasn&rsquo;t happy with the solution. The Wordpress editor is slow, and in my opinion it&rsquo;s too clunky for building a simple blogging site. I found myself fighting the tooling, and still ending up with a boring looking site.</p>
-<p>This prompted me to look into static site generators. After some searching on <a href="https://indiehackers.com/">IndieHackers</a> I was sold on making the move to Hugo. Hugo is super easy to setup, and has great customizable themes out-of-the box.</p>
-<h3 id="what-is-hugo">What is Hugo?</h3>
-<p>Hugo is an open source static site generator. Static sites are great for things like blogs and portfolios (like this site), since there is no server-side work that needs to be done for the site to work. The pages are pre-built and served without change from a server, unlike a traditional website. This makes static sites inherently quick. Additionally, static sites are a breeze to host. I&rsquo;ll discuss how I&rsquo;m using Github Pages to host this site farther down.</p>
-<h2 id="setting-up-hugo">Setting up Hugo</h2>
-<p>After browsing the available themes, I settled on <a href="https://themes.gohugo.io/ghostwriter/">Ghostwriter</a>. It had the general look I was going for, and was easy to customize to my liking. After making a few tweaks, this is the result I had for the main post content section:</p>
-<p><img src="https://i.imgur.com/4QMOKdr.png" alt="Hugo post content"></p>
-<h2 id="hosting-on-github-pages">Hosting on Github Pages</h2>
-<p>I decided to host the site on Github Pages for the following reasons.</p>
-<ol>
-<li>It&rsquo;s free.</li>
-<li>Setup is quick and easy. Just setup your repo to be a Github pages site and you&rsquo;re ready to go.</li>
-<li>Making updates is seamless. New changes are pushed to the repo and automatically reflected on the site.</li>
-</ol>
+    <p>For this tutorial I will be assuming you have already setup a site on Github Pages that&rsquo;s being run on the standard <code>USERNAME.github.io</code> domain. If you haven&rsquo;t done so, a quick Google search will yield lots of articles explaining the process. I&rsquo;m using Bluehost as my domain provider, but the steps should be similar for any major domain provider.</p>
+<h2 id="setup-in-github-repository">Setup in Github repository</h2>
+<p>In your Github repo for the site, navigate to the &ldquo;Settings&rdquo; tab. Scroll down and you will find an area for Github Pages setup. In the Custom Domain section, enter the domain name you want to use and click save.
+<img src="https://i.imgur.com/UEKZ7VS.png" alt="Github Domain">
+If you&rsquo;re using a static site generator, you may already have a file in your repo called CNAME. If you don&rsquo;t, you can create one. Inside this file, place the domain name. 
+<img src="https://i.imgur.com/NQKTehC.png" alt="CNAME"></p>
+<h2 id="host-record-setup">Host record setup</h2>
+<p>Now open the domain provider that you are using, and navigate to the DNS section for the domain you are interested in using.</p>
 
 </div>
 
@@ -108,14 +101,14 @@
             <span>Tagged:</span>
             
             
-                <a href="/tags/tooling/">tooling</a>
+                <a href="/tags/hosting/">hosting</a>
             
         </p>
     
 
     <div class="share">
         
-            <a class="icon-twitter" href="https://twitter.com/share?text=Why%20I%27m%20moving%20from%20Wordpress%20to%20Hugo&url=%2fwordpresstohugo%2f"
+            <a class="icon-twitter" href="https://twitter.com/share?text=Setting%20up%20a%20Github%20Pages%20custom%20domain&url=%2fgithubpagescustomdomain%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fa fa-twitter"></i>
                 <span class="hidden">Twitter</span>
@@ -123,7 +116,7 @@
         
 
         
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fwordpresstohugo%2f"
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fgithubpagescustomdomain%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 <i class="fa fa-facebook"></i>
                 <span class="hidden">Facebook</span>
@@ -131,7 +124,7 @@
         
 
         
-            <a class="icon-google-plus" href="https://plus.google.com/share?url=%2fwordpresstohugo%2f"
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=%2fgithubpagescustomdomain%2f"
               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
               <i class="fa fa-google-plus"></i>
                 <span class="hidden">Google+</span>

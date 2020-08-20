@@ -11,9 +11,19 @@
     
     
     <item>
+      <title>Setting up a Github Pages custom domain</title>
+      <link>/githubpagescustomdomain/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/githubpagescustomdomain/</guid>
+      <description>For this tutorial I will be assuming you have already setup a site on Github Pages that&amp;rsquo;s being run on the standard USERNAME.github.io domain. If you haven&amp;rsquo;t done so, a quick Google search will yield lots of articles explaining the process. I&amp;rsquo;m using Bluehost as my domain provider, but the steps should be similar for any major domain provider.
+Setup in Github repository In your Github repo for the site, navigate to the &amp;ldquo;Settings&amp;rdquo; tab.</description>
+    </item>
+    
+    <item>
       <title>Why I&#39;m moving from Wordpress to Hugo</title>
       <link>/wordpresstohugo/</link>
-      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/wordpresstohugo/</guid>
       <description>Why move from Wordpress to Hugo? I created a Wordpress site on Bluehost for my personal/blog site because I thought it would be the easiest way to publish blogs without having to worry about hosting or creating my own site. Even as a developer, I have no interest in spending too much time reinventing the wheel to create a simple blog. After writing just one entry there, I wasn&amp;rsquo;t happy with the solution.</description>

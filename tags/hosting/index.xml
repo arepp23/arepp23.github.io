@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hosting on Austin Repp</title>
+    <link>/tags/hosting/</link>
+    <description>Recent content in hosting on Austin Repp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 20 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/hosting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setting up a Github Pages custom domain</title>
+      <link>/githubpagescustomdomain/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/githubpagescustomdomain/</guid>
+      <description>For this tutorial I will be assuming you have already setup a site on Github Pages that&amp;rsquo;s being run on the standard USERNAME.github.io domain. If you haven&amp;rsquo;t done so, a quick Google search will yield lots of articles explaining the process. I&amp;rsquo;m using Bluehost as my domain provider, but the steps should be similar for any major domain provider.
+Setup in Github repository In your Github repo for the site, navigate to the &amp;ldquo;Settings&amp;rdquo; tab.</description>
+    </item>
+    
+  </channel>
+</rss>
