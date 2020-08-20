@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>marketing on Austin Repp</title>
+    <link>/categories/marketing/</link>
+    <description>Recent content in marketing on Austin Repp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 08 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/marketing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Generating Sales from YouTube micro-influencers</title>
+      <link>/youtubemicro/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/youtubemicro/</guid>
+      <description>For the last few months, I’ve been reaching out to “micro influencers” on YouTube, with the hope of driving targeted traffic to my product, http://discordbotstudio.org. I’m classifying micro influencers as having between 1,000 – 10,000 subscribers on YouTube. The benefit of reaching channels of this size is that they have dedicated audiences based on a certain niche (in my case this is Discord Bots and the creation thereof).
+Background Info Discord Bot Studio (DBS) is a visual programming tool I released on Steam on May 12th, 2020 (2 months prior to writing this).</description>
+    </item>
+    
+  </channel>
+</rss>
