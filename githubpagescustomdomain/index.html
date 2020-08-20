@@ -92,6 +92,18 @@ If you&rsquo;re using a static site generator, you may already have a file in yo
 <img src="https://i.imgur.com/NQKTehC.png" alt="CNAME"></p>
 <h2 id="host-record-setup">Host record setup</h2>
 <p>Now open the domain provider that you are using, and navigate to the DNS section for the domain you are interested in using.</p>
+<p>First you will need to add four A host records. The host record for each of these is &ldquo;@&rdquo;. The image below shows what it looks like on Bluehost. 
+<img src="https://i.imgur.com/3B5bev3.png" alt="A host">
+The four IP addresses (at the time of writing this) for each record to be added are:</p>
+<ul>
+<li>185.199.108.153</li>
+<li>185.199.109.153</li>
+<li>185.199.110.153</li>
+<li>185.199.111.153</li>
+</ul>
+<p>Next, we need to add a CNAME record for the www site record. This will be in the format <code>USERNAME.github.io</code>
+<img src="https://i.imgur.com/P3zGhXl.png" alt="CNAME"></p>
+<p>That&rsquo;s it! The records will probably take some time to update, so be patient. After they update you should see your site live on the domain you&rsquo;ve provided.</p>
 
 </div>
 
