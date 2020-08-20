@@ -5,10 +5,19 @@
     <link>/post/</link>
     <description>Recent content in Posts on Austin Repp</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 08 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Why I&#39;m moving from Wordpress to Hugo</title>
+      <link>/wordpresstohugo/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/wordpresstohugo/</guid>
+      <description>Why move from Wordpress to Hugo? I created a Wordpress site on Bluehost for my personal/blog site because I thought it would be the easiest way to publish blogs without having to worry about hosting or creating my own site. Even as a developer, I have no interest in spending too much time reinventing the wheel to create a simple blog. After writing just one entry there, I wasn&amp;rsquo;t happy with the solution.</description>
+    </item>
     
     <item>
       <title>Generating Sales from YouTube micro-influencers</title>
