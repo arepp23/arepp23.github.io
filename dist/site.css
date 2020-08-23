@@ -126,6 +126,7 @@ table tr { border-bottom: 1px dotted #aeadad; }
 .post-stub a:hover .post-stub-tag.marketing { background: #7d24a6; }
 .post-stub-tag { background: #303030; border-radius: 3px; color: #fff; float: right; font-size: 15px; margin: 7px 0 0; padding: 3px 5px; text-transform: uppercase; }
 .post-stub-tag.marketing {background: #7d24a6;}
+.post-stub-tag.hosting {background: #34eb83; color: black;}
 .post-stub-tag.tooling {background: #cfb300; color: black;}
 .post-stub-title { display: inline-block; margin: 10px 0px 10px 0px; text-transform: none; font-size: 30px; }
 .post-stub-description { display: inline-block; margin: 0; text-transform: none; }
