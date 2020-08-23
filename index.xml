@@ -5,10 +5,21 @@
     <link>/</link>
     <description>Recent content on Austin Repp</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 20 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to add Google Analytics tracking ID to a Hugo site</title>
+      <link>/googleanalyticshugo/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/googleanalyticshugo/</guid>
+      <description>For this tutorial I will be assuming you already have a Hugo site setup, and that you have a Google Analytics property with a tracking ID created.
+Adding the tracking ID to your site Open your config.toml file, and add a field for googleAnalytics at the top level. Set the value to a string containing the tracking ID.
+baseurl = &amp;quot;/&amp;quot;title = &amp;quot;Austin Repp&amp;quot;theme = &amp;quot;ghostwriter&amp;quot;googleAnalytics = &amp;quot;UA-999999999-6&amp;quot;[Params]mainSections = [&amp;quot;post&amp;quot;]intro = trueheadline = &amp;quot;Austin Repp&amp;quot;Next we will add a Hugo internal template to get the Google Analytics code snippet to be inserted on each of the sites pages when loaded.</description>
+    </item>
     
     <item>
       <title>Setting up a Github Pages custom domain</title>

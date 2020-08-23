@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>How to add Google Analytics tracking ID to a Hugo site &middot; </title>
+        <meta name="description" content="How to add a tracking ID from Google Analytics to your Hugo site so you can monitor traffic.">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.74.3" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-142798131-6', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+        <meta property="og:title" content="How to add Google Analytics tracking ID to a Hugo site">
+<meta property="og:description" content="How to add a tracking ID from Google Analytics to your Hugo site so you can monitor traffic.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/googleanalyticshugo/">
+        <link rel="stylesheet" href="/dist/site.css">
+        <link rel="stylesheet" href="/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+        
+    </head>
+    <body>
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Home" href="/">Home</a>
+                            </h1>
+                        
+                        <a class="button-square" href="/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/AustinRepp" rel="me">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:discordbotstudio@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">How to add Google Analytics tracking ID to a Hugo site</h1>
+    
+        <p class="post-description" itemprop="description">How to add a tracking ID from Google Analytics to your Hugo site so you can monitor traffic.</p>
+    
+    <p class="post-date post-line">
+        <span>Published <time datetime="2020-08-23" itemprop="datePublished">Sun, Aug 23, 2020</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="#" itemprop="url" rel="author">Austin Repp</a>
+            </span>
+        </span>
+    </p>
+    
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <p>For this tutorial I will be assuming you already have a Hugo site setup, and that you have a Google Analytics property with a tracking ID created.</p>
+<h2 id="adding-the-tracking-id-to-your-site">Adding the tracking ID to your site</h2>
+<p>Open your <code>config.toml</code> file, and add a field for googleAnalytics at the top level. Set the value to a string containing the tracking ID.</p>
+<pre><code>baseurl = &quot;/&quot;
+title = &quot;Austin Repp&quot;
+theme = &quot;ghostwriter&quot;
+googleAnalytics = &quot;UA-999999999-6&quot;
+
+[Params]
+    mainSections = [&quot;post&quot;]
+    intro = true
+    headline = &quot;Austin Repp&quot;
+</code></pre><p>Next we will add a Hugo internal template to get the Google Analytics code snippet to be inserted on each of the sites pages when loaded. This is the template we will add:</p>
+<pre><code> {{ template &quot;_internal/google_analytics.html&quot; . }} 
+</code></pre><p>Depending on your theme, you may already have this template added. If it&rsquo;s not already added as part of your theme, you will want to add it to one of the <a href="https://gohugo.io/templates/partials/">html partials</a> that is used on every page. In my case, that&rsquo;s <code>header.html</code>. Add the internal template for Google Analytics to the <code>&lt;head&gt;</code> tag on this partial.</p>
+<pre><code>&lt;head&gt;
+       {{ template &quot;_internal/google_analytics.html&quot; . }}
+</code></pre><h2 id="testing">Testing</h2>
+<p>Now you can run your Hugo site on localhost, or push it to your domain to make sure it works. The first way to make sure it&rsquo;s adding the tracking to each page is to press F12 to inspect the page HTML. You can open the <code>&lt;head&gt;</code> tag on any page, and look for a script containing javascript like the following:</p>
+<pre><code>
+var doNotTrack = false;
+if (!doNotTrack) {
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-999999999-6', 'auto');
+   
+   ga('send', 'pageview');
+}
+</code></pre><p>This script being present is a good sign that you added the template correctly, and that it&rsquo;s running the necessary javascript to send a page hit to Google Analytics. You can also try running the site on your phone or another computer, and seeing if the Google Analytics shows an active user while you&rsquo;re viewing the page. 
+<img src="https://i.imgur.com/6a0x9tX.png" alt="Active User = 1"></p>
+<p>And that&rsquo;s it! That&rsquo;s all the necessary setup. Now your Hugo site should track visitors directly to Google Analytics.</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/hosting/">hosting</a>
+            
+        </p>
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=How%20to%20add%20Google%20Analytics%20tracking%20ID%20to%20a%20Hugo%20site&url=%2fgoogleanalyticshugo%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fgoogleanalyticshugo%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=%2fgoogleanalyticshugo%2f"
+              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+              <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+            </a>
+        
+        
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Austin Repp" href="/">Austin Repp</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2020 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="/js/jquery-1.11.3.min.js"></script>
+        <script src="/js/jquery.fitvids.js"></script>
+        <script src="/js/scripts.js"></script>
+    </body>
+</html>
+
