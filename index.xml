@@ -18,7 +18,7 @@
       <guid>/googleanalyticshugo/</guid>
       <description>For this tutorial I will be assuming you already have a Hugo site setup, and that you have a Google Analytics property with a tracking ID created.
 Adding the tracking ID to your site Open your config.toml file, and add a field for googleAnalytics at the top level. Set the value to a string containing the tracking ID.
-baseurl = &amp;quot;/&amp;quot;title = &amp;quot;Austin Repp&amp;quot;theme = &amp;quot;ghostwriter&amp;quot;googleAnalytics = &amp;quot;UA-999999999-6&amp;quot;[Params]mainSections = [&amp;quot;post&amp;quot;]intro = trueheadline = &amp;quot;Austin Repp&amp;quot;Next we will add a Hugo internal template to get the Google Analytics code snippet to be inserted on each of the sites pages when loaded.</description>
+baseurl = &amp;#34;/&amp;#34; title = &amp;#34;Austin Repp&amp;#34; theme = &amp;#34;ghostwriter&amp;#34; googleAnalytics = &amp;#34;UA-999999999-6&amp;#34; # This is the added line [Params] mainSections = [&amp;#34;post&amp;#34;] intro = true headline = &amp;#34;Austin Repp&amp;#34; Next we will add a Hugo internal template to get the Google Analytics code snippet to be inserted on each of the sites pages when loaded.</description>
     </item>
     
     <item>

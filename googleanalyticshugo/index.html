@@ -100,34 +100,34 @@ if (!doNotTrack) {
     <p>For this tutorial I will be assuming you already have a Hugo site setup, and that you have a Google Analytics property with a tracking ID created.</p>
 <h2 id="adding-the-tracking-id-to-your-site">Adding the tracking ID to your site</h2>
 <p>Open your <code>config.toml</code> file, and add a field for googleAnalytics at the top level. Set the value to a string containing the tracking ID.</p>
-<pre><code>baseurl = &quot;/&quot;
-title = &quot;Austin Repp&quot;
-theme = &quot;ghostwriter&quot;
-googleAnalytics = &quot;UA-999999999-6&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">baseurl</span> = <span style="color:#e6db74">&#34;/&#34;</span>
+<span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;Austin Repp&#34;</span>
+<span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;ghostwriter&#34;</span>
+<span style="color:#a6e22e">googleAnalytics</span> = <span style="color:#e6db74">&#34;UA-999999999-6&#34;</span> <span style="color:#75715e"># This is the added line</span>
 
-[Params]
-    mainSections = [&quot;post&quot;]
-    intro = true
-    headline = &quot;Austin Repp&quot;
-</code></pre><p>Next we will add a Hugo internal template to get the Google Analytics code snippet to be inserted on each of the sites pages when loaded. This is the template we will add:</p>
-<pre><code> {{ template &quot;_internal/google_analytics.html&quot; . }} 
-</code></pre><p>Depending on your theme, you may already have this template added. If it&rsquo;s not already added as part of your theme, you will want to add it to one of the <a href="https://gohugo.io/templates/partials/">html partials</a> that is used on every page. In my case, that&rsquo;s <code>header.html</code>. Add the internal template for Google Analytics to the <code>&lt;head&gt;</code> tag on this partial.</p>
-<pre><code>&lt;head&gt;
-       {{ template &quot;_internal/google_analytics.html&quot; . }}
-</code></pre><h2 id="testing">Testing</h2>
+[<span style="color:#a6e22e">Params</span>]
+    <span style="color:#a6e22e">mainSections</span> = [<span style="color:#e6db74">&#34;post&#34;</span>]
+    <span style="color:#a6e22e">intro</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#a6e22e">headline</span> = <span style="color:#e6db74">&#34;Austin Repp&#34;</span>
+</code></pre></div><p>Next we will add a Hugo internal template to get the Google Analytics code snippet to be inserted on each of the sites pages when loaded. This is the template we will add:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> {{ template &#34;_internal/google_analytics.html&#34; . }} 
+</code></pre></div><p>Depending on your theme, you may already have this template added. If it&rsquo;s not already added as part of your theme, you will want to add it to one of the <a href="https://gohugo.io/templates/partials/">html partials</a> that is used on every page. In my case, that&rsquo;s <code>header.html</code>. Add the internal template for Google Analytics to the <code>&lt;head&gt;</code> tag on this partial.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
+       {{ template &#34;_internal/google_analytics.html&#34; . }}
+</code></pre></div><h2 id="testing">Testing</h2>
 <p>Now you can run your Hugo site on localhost, or push it to your domain to make sure it works. The first way to make sure it&rsquo;s adding the tracking to each page is to press F12 to inspect the page HTML. You can open the <code>&lt;head&gt;</code> tag on any page, and look for a script containing javascript like the following:</p>
-<pre><code>
-var doNotTrack = false;
-if (!doNotTrack) {
-   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-   ga('create', 'UA-999999999-6', 'auto');
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">doNotTrack</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">doNotTrack</span>) {
+   (<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">i</span>,<span style="color:#a6e22e">s</span>,<span style="color:#a6e22e">o</span>,<span style="color:#a6e22e">g</span>,<span style="color:#a6e22e">r</span>,<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">m</span>){<span style="color:#a6e22e">i</span>[<span style="color:#e6db74">&#39;GoogleAnalyticsObject&#39;</span>]<span style="color:#f92672">=</span><span style="color:#a6e22e">r</span>;<span style="color:#a6e22e">i</span>[<span style="color:#a6e22e">r</span>]<span style="color:#f92672">=</span><span style="color:#a6e22e">i</span>[<span style="color:#a6e22e">r</span>]<span style="color:#f92672">||</span><span style="color:#66d9ef">function</span>(){
+   (<span style="color:#a6e22e">i</span>[<span style="color:#a6e22e">r</span>].<span style="color:#a6e22e">q</span><span style="color:#f92672">=</span><span style="color:#a6e22e">i</span>[<span style="color:#a6e22e">r</span>].<span style="color:#a6e22e">q</span><span style="color:#f92672">||</span>[]).<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">arguments</span>)},<span style="color:#a6e22e">i</span>[<span style="color:#a6e22e">r</span>].<span style="color:#a6e22e">l</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span><span style="color:#f92672">*</span><span style="color:#66d9ef">new</span> Date();<span style="color:#a6e22e">a</span><span style="color:#f92672">=</span><span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">createElement</span>(<span style="color:#a6e22e">o</span>),
+   <span style="color:#a6e22e">m</span><span style="color:#f92672">=</span><span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">getElementsByTagName</span>(<span style="color:#a6e22e">o</span>)[<span style="color:#ae81ff">0</span>];<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">async</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#a6e22e">g</span>;<span style="color:#a6e22e">m</span>.<span style="color:#a6e22e">parentNode</span>.<span style="color:#a6e22e">insertBefore</span>(<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">m</span>)
+   })(window,document,<span style="color:#e6db74">&#39;script&#39;</span>,<span style="color:#e6db74">&#39;https://www.google-analytics.com/analytics.js&#39;</span>,<span style="color:#e6db74">&#39;ga&#39;</span>);
+   <span style="color:#a6e22e">ga</span>(<span style="color:#e6db74">&#39;create&#39;</span>, <span style="color:#e6db74">&#39;UA-999999999-6&#39;</span>, <span style="color:#e6db74">&#39;auto&#39;</span>);
    
-   ga('send', 'pageview');
+   <span style="color:#a6e22e">ga</span>(<span style="color:#e6db74">&#39;send&#39;</span>, <span style="color:#e6db74">&#39;pageview&#39;</span>);
 }
-</code></pre><p>This script being present is a good sign that you added the template correctly, and that it&rsquo;s running the necessary javascript to send a page hit to Google Analytics. You can also try running the site on your phone or another computer, and seeing if the Google Analytics shows an active user while you&rsquo;re viewing the page. 
+</code></pre></div><p>This script being present is a good sign that you added the template correctly, and that it&rsquo;s running the necessary javascript to send a page hit to Google Analytics. You can also try running the site on your phone or another computer, and seeing if the Google Analytics shows an active user while you&rsquo;re viewing the page. 
 <img src="https://i.imgur.com/6a0x9tX.png" alt="Active User = 1"></p>
 <p>And that&rsquo;s it! That&rsquo;s all the necessary setup. Now your Hugo site should track visitors directly to Google Analytics.</p>
 
