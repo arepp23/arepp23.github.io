@@ -5,10 +5,19 @@
     <link>/</link>
     <description>Recent content on Austin Repp</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 27 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to deep copy an object in Javascript</title>
+      <link>/javascript-deep-copy-object/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/javascript-deep-copy-object/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>28&#43; free web development resources</title>

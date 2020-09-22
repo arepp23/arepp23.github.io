@@ -124,7 +124,7 @@ table tr { border-bottom: 1px dotted #aeadad; }
 .post-stub a { -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out; display: block; color: #f1f0ea; padding: 20px 5px; }
 .post-stub a:hover { background: #292f36; color: #f1f0ea; padding: 20px 12px; }
 .post-stub a:hover .post-stub-tag.marketing { background: #7d24a6; }
-.post-stub-tag { background: #303030; border-radius: 3px; color: #fff; float: right; font-size: 15px; margin: 7px 0 0; padding: 3px 5px; text-transform: uppercase; }
+.post-stub-tag { background: #303030; border-radius: 3px; color: #fff; float: right; font-size: 15px; margin: 7px 0 0; padding: 6px 5px; text-transform: uppercase; font-weight: 700;}
 .post-stub-tag.marketing {background: #7d24a6;}
 .post-stub-tag.javascript {background: #ec008c;}
 .post-stub-tag.dev {background: #4eb8e6; color: black;}
