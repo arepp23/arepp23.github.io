@@ -5,19 +5,10 @@
     <link>/tags/javascript/</link>
     <description>Recent content in javascript on Austin Repp</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 04 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>How to deep copy an object in Javascript</title>
-      <link>/javascript-deep-copy-object/</link>
-      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/javascript-deep-copy-object/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Safe eval alternative in Javascript</title>
