@@ -77,7 +77,7 @@ table tr { border-bottom: 1px dotted #aeadad; }
 .button { background: #303030; border: none; border-radius: 3px; color: #fefefe; font-size: 14px; font-weight: 700; padding: 10px 12px; text-transform: uppercase; }
 .button.marketing {background: #7d24a6; display: inline-block;}
 .button:hover { background: #f03838; }
-.button-square { background: #f03838; color: #fff; float: left; font-size: 17px; margin: 0 0 0 10px; padding: 3px 8px 4px; }
+.button-square { background: #f03838; color: #fff; float: left; font-size: 17px; margin: 2px 10px; padding: 5px 8px 4px; }
 .button-square:hover { background: #303030; }
 .error { text-align: center; }
 .comments { margin-top: 10px; }
@@ -127,6 +127,7 @@ table tr { border-bottom: 1px dotted #aeadad; }
 .post-stub-tag { background: #303030; border-radius: 3px; color: #fff; float: right; font-size: 15px; margin: 7px 0 0; padding: 6px 5px; text-transform: uppercase; font-weight: 700;}
 .post-stub-tag.marketing {background: #7d24a6;}
 .post-stub-tag.javascript {background: #ec008c;}
+.post-stub-tag.c {background: #ff6600; color: black;}
 .post-stub-tag.dev {background: #4eb8e6; color: black;}
 .post-stub-tag.hosting {background: #34eb83; color: black;}
 .post-stub-tag.tooling {background: #cfb300; color: black;}

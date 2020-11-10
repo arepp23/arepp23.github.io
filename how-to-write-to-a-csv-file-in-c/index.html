@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Why I&#39;m moving from Wordpress to Hugo &middot; </title>
-        <meta name="description" content="The reasoning behind my switch from Wordpress/Bluehost to Hugo/Github pages.">
+        <title>How to write to a CSV (Excel) file in C &middot; </title>
+        <meta name="description" content="Exporting data to a basic comma-separated file from a C program.">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.74.3" />
@@ -24,10 +24,10 @@ if (!doNotTrack) {
 }
 </script>
 
-        <meta property="og:title" content="Why I&#39;m moving from Wordpress to Hugo">
-<meta property="og:description" content="The reasoning behind my switch from Wordpress/Bluehost to Hugo/Github pages.">
+        <meta property="og:title" content="How to write to a CSV (Excel) file in C">
+<meta property="og:description" content="Exporting data to a basic comma-separated file from a C program.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="/wordpresstohugo/">
+<meta property="og:url" content="/how-to-write-to-a-csv-file-in-c/">
         <link rel="stylesheet" href="/dist/site.css">
         <link rel="stylesheet" href="/dist/syntax.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
@@ -78,16 +78,16 @@ if (!doNotTrack) {
 <div class="container">
     <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Why I&#39;m moving from Wordpress to Hugo</h1>
+    <h1 class="post-title" itemprop="name headline">How to write to a CSV (Excel) file in C</h1>
     
-        <p class="post-description" itemprop="description">The reasoning behind my switch from Wordpress/Bluehost to Hugo/Github pages.</p>
+        <p class="post-description" itemprop="description">Exporting data to a basic comma-separated file from a C program.</p>
     
     <p class="post-date post-line">
-        <span>Published <time datetime="2020-08-19" itemprop="datePublished">Wed, Aug 19, 2020</time></span>
+        <span>Published <time datetime="2020-11-09" itemprop="datePublished">Mon, Nov 9, 2020</time></span>
         <span>by</span>
         <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
             <span itemprop="name">
-                <a href="#" itemprop="url" rel="author"></a>
+                <a href="#" itemprop="url" rel="author">Austin Repp</a>
             </span>
         </span>
     </p>
@@ -97,23 +97,19 @@ if (!doNotTrack) {
         <div class="post-content clearfix" itemprop="articleBody">
     
 
-    <h1 id="why-move-from-wordpress-to-hugo">Why move from Wordpress to Hugo?</h1>
-<p>I created a Wordpress site on Bluehost for my personal/blog site because I thought it would be the easiest way to publish blogs without having to worry about hosting or creating my own site. Even as a developer, I have no interest in spending too much time reinventing the wheel to create a simple blog. After writing just one entry there, I wasn&rsquo;t happy with the solution. The Wordpress editor is slow, and in my opinion it&rsquo;s too clunky for building a simple blogging site. I found myself fighting the tooling, and still ending up with a boring looking site.</p>
-<p>This prompted me to look into static site generators. After some searching on <a href="https://indiehackers.com/">IndieHackers</a> I was sold on making the move to Hugo. Hugo is super easy to setup, and has great customizable themes out-of-the box.</p>
-<h3 id="what-is-hugo">What is Hugo?</h3>
-<p>Hugo is an open source static site generator. Static sites are great for things like blogs and portfolios (like this site), since there is no server-side work that needs to be done for the site to work. The pages are pre-built and served without change from a server, unlike a traditional website. This makes static sites inherently quick. Additionally, static sites are a breeze to host. I&rsquo;ll discuss how I&rsquo;m using Github Pages to host this site farther down.</p>
-<h2 id="setting-up-hugo">Setting up Hugo</h2>
-<p>After browsing the available themes, I settled on <a href="https://themes.gohugo.io/ghostwriter/">Ghostwriter</a>. It had the general look I was going for, and was easy to customize to my liking. After making a few tweaks, this is the result I had for the main post content section:</p>
-<p><img src="https://i.imgur.com/4QMOKdr.png" alt="Hugo post content"></p>
-<h2 id="hosting-on-github-pages">Hosting on Github Pages</h2>
-<p>I decided to host the site on Github Pages for the following reasons.</p>
-<ol>
-<li>It&rsquo;s free.</li>
-<li>Setup is quick and easy. Just setup your repo to be a Github pages site and you&rsquo;re ready to go.</li>
-<li>Making updates is seamless. New changes are pushed to the repo and automatically reflected on the site.</li>
-</ol>
-<h2 id="final-thoughts">Final thoughts</h2>
-<p>I&rsquo;m still working to modify the theme to my liking, but so far I&rsquo;m happy with the results and ease-of-use. Being able to edit the css directly is much more intuitive than trying to customize a Wordpress theme. Writing articles is simple, as they&rsquo;re just markdown files. I will continue to explore the available options, but Hugo is looking like a good bet for now.</p>
+    <h2 id="writing-to-a-csv-using-c-code">Writing to a CSV using C code</h2>
+<p>A basic CSV file relies on a comma-separated data format, which makes it straightforward to write to this file type from a c program.</p>
+<p>First you will want to create a file pointer, which will be used to access and write to a file. Then we call <code>fopen</code> on this file pointer, passing in the name of the file we want to write to. In this scenario, I don&rsquo;t yet have a file called &ldquo;MyFile.csv&rdquo;. A file with that name will automatically be created.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">FILE <span style="color:#f92672">*</span>fpt;
+
+fpt <span style="color:#f92672">=</span> fopen(<span style="color:#e6db74">&#34;MyFile.csv&#34;</span>, <span style="color:#e6db74">&#34;w+&#34;</span>);
+</code></pre></div><p>Next I will show how to use <code>fprintf</code> to write data to the file pointer. The line below shows how a row of column headers can first be written to the file. Notice how the values are comma-separated, and there is a &ldquo;\n&rdquo; at the end, indicating that it should go to the next row.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">fprintf(fpt,<span style="color:#e6db74">&#34;ID, Name, Email, Phone Number</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</code></pre></div><p>Once the header row is written, we can loop through our data, and write each index (in this case a person) to a row in the CSV file. The following would be placed in a loop, with each index being a different person.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">fprintf(fpt,<span style="color:#e6db74">&#34;%d, %s, %s, %s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, id, name, email, phone);
+</code></pre></div><p>After writing each row, we can close the file pointer.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">fclose(fpt);
+</code></pre></div><p>That&rsquo;s it! Your file will now contain however many rows of data have been written to it.</p>
 
 </div>
 
@@ -123,14 +119,14 @@ if (!doNotTrack) {
             <span>Tagged:</span>
             
             
-                <a href="/tags/tooling/">tooling</a>
+                <a href="/tags/c/">c</a>
             
         </p>
     
 
     <div class="share">
         
-            <a class="icon-twitter" href="https://twitter.com/share?text=Why%20I%27m%20moving%20from%20Wordpress%20to%20Hugo&url=%2fwordpresstohugo%2f"
+            <a class="icon-twitter" href="https://twitter.com/share?text=How%20to%20write%20to%20a%20CSV%20%28Excel%29%20file%20in%20C&url=%2fhow-to-write-to-a-csv-file-in-c%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fa fa-twitter"></i>
                 <span class="hidden">Twitter</span>
@@ -138,7 +134,7 @@ if (!doNotTrack) {
         
 
         
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fwordpresstohugo%2f"
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fhow-to-write-to-a-csv-file-in-c%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 <i class="fa fa-facebook"></i>
                 <span class="hidden">Facebook</span>
@@ -146,7 +142,7 @@ if (!doNotTrack) {
         
 
         
-            <a class="icon-google-plus" href="https://plus.google.com/share?url=%2fwordpresstohugo%2f"
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=%2fhow-to-write-to-a-csv-file-in-c%2f"
               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
               <i class="fa fa-google-plus"></i>
                 <span class="hidden">Google+</span>

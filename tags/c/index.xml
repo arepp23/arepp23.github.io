@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c on Austin Repp</title>
+    <link>/tags/c/</link>
+    <description>Recent content in c on Austin Repp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 09 Nov 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to write to a CSV (Excel) file in C</title>
+      <link>/how-to-write-to-a-csv-file-in-c/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/how-to-write-to-a-csv-file-in-c/</guid>
+      <description>Writing to a CSV using C code A basic CSV file relies on a comma-separated data format, which makes it straightforward to write to this file type from a c program.
+First you will want to create a file pointer, which will be used to access and write to a file. Then we call fopen on this file pointer, passing in the name of the file we want to write to.</description>
+    </item>
+    
+  </channel>
+</rss>
