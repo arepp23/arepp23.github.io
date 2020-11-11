@@ -5,10 +5,19 @@
     <link>/</link>
     <description>Recent content on Austin Repp</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 09 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How I increased my conversion rate by 2% in a day.</title>
+      <link>/increasing-conversion-rate-with-new-landing-page-trailer/</link>
+      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/increasing-conversion-rate-with-new-landing-page-trailer/</guid>
+      <description>Background My app, Discord Bot Studio , is a visual programming tool for creating chatbots for Discord. The application runs on Desktop, and is distributed on Steam, since that&amp;rsquo;s where my target audience hangs out. The product had been selling decently since its release in May 2020, but I was constantly looking for ways to drive more traffic to it. After trying lots of marketing strategies, to varying degrees of success, I realized that I may be able to increase the number of copies being sold without bringing more people to the page.</description>
+    </item>
     
     <item>
       <title>How to write to a CSV (Excel) file in C</title>
