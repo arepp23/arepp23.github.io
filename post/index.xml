@@ -5,10 +5,21 @@
     <link>/post/</link>
     <description>Recent content in Posts on Austin Repp</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to fix: Express.js Request Body is Undefined</title>
+      <link>/express-js-req-body-undefined/</link>
+      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/express-js-req-body-undefined/</guid>
+      <description>express.bodyParser() is no longer bundled with express. You can install it using npm i body-parser.
+Fixing the error The code below shows how you can include bodyParser, and by extension jsonParser. Then, simply list jsonParser as the second argument in your POST method, and you will no longer have an undefined request body.
+const app = express(); var bodyParser = require(&amp;#34;body-parser&amp;#34;); var jsonParser = bodyParser.json(); // POST /endpoint expects JSON body app.</description>
+    </item>
     
     <item>
       <title>How I increased my conversion rate by 2% in a day.</title>

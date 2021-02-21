@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Why I&#39;m moving from Wordpress to Hugo &middot; </title>
-        <meta name="description" content="The reasoning behind my switch from Wordpress/Bluehost to Hugo/Github pages.">
+        <title>How to fix: Express.js Request Body is Undefined &middot; </title>
+        <meta name="description" content="An explanation on fixing issues in express where the JSON req.body is undefined.">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.74.3" />
@@ -24,10 +24,10 @@ if (!doNotTrack) {
 }
 </script>
 
-        <meta property="og:title" content="Why I&#39;m moving from Wordpress to Hugo">
-<meta property="og:description" content="The reasoning behind my switch from Wordpress/Bluehost to Hugo/Github pages.">
+        <meta property="og:title" content="How to fix: Express.js Request Body is Undefined">
+<meta property="og:description" content="An explanation on fixing issues in express where the JSON req.body is undefined.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="/wordpresstohugo/">
+<meta property="og:url" content="/express-js-req-body-undefined/">
         <link rel="stylesheet" href="/dist/site.css">
         <link rel="stylesheet" href="/dist/syntax.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
@@ -78,16 +78,16 @@ if (!doNotTrack) {
 <div class="container">
     <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Why I&#39;m moving from Wordpress to Hugo</h1>
+    <h1 class="post-title" itemprop="name headline">How to fix: Express.js Request Body is Undefined</h1>
     
-        <p class="post-description" itemprop="description">The reasoning behind my switch from Wordpress/Bluehost to Hugo/Github pages.</p>
+        <p class="post-description" itemprop="description">An explanation on fixing issues in express where the JSON req.body is undefined.</p>
     
     <p class="post-date post-line">
-        <span>Published <time datetime="2020-08-19" itemprop="datePublished">Wed, Aug 19, 2020</time></span>
+        <span>Published <time datetime="2021-02-20" itemprop="datePublished">Sat, Feb 20, 2021</time></span>
         <span>by</span>
         <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
             <span itemprop="name">
-                <a href="#" itemprop="url" rel="author"></a>
+                <a href="#" itemprop="url" rel="author">Austin Repp</a>
             </span>
         </span>
     </p>
@@ -97,24 +97,18 @@ if (!doNotTrack) {
         <div class="post-content clearfix" itemprop="articleBody">
     
 
-    <h1 id="why-move-from-wordpress-to-hugo">Why move from Wordpress to Hugo?</h1>
-<p>I created a Wordpress site on Bluehost for my personal/blog site because I thought it would be the easiest way to publish blogs without having to worry about hosting or creating my own site. Even as a developer, I have no interest in spending too much time reinventing the wheel to create a simple blog. After writing just one entry there, I wasn&rsquo;t happy with the solution. The Wordpress editor is slow, and in my opinion it&rsquo;s too clunky for building a simple blogging site. I found myself fighting the tooling, and still ending up with a boring looking site.</p>
-<p>This prompted me to look into static site generators. After some searching on <a href="https://indiehackers.com/">IndieHackers</a> I was sold on making the move to Hugo. Hugo is super easy to setup, and has great customizable themes out-of-the box.</p>
-<h3 id="what-is-hugo">What is Hugo?</h3>
-<p>Hugo is an open source static site generator. Static sites are great for things like blogs and portfolios (like this site), since there is no server-side work that needs to be done for the site to work. The pages are pre-built and served without change from a server, unlike a traditional website. This makes static sites inherently quick. Additionally, static sites are a breeze to host. I&rsquo;ll discuss how I&rsquo;m using Github Pages to host this site farther down.</p>
-<h2 id="setting-up-hugo">Setting up Hugo</h2>
-<p>After browsing the available themes, I settled on <a href="https://themes.gohugo.io/ghostwriter/">Ghostwriter</a>. It had the general look I was going for, and was easy to customize to my liking. After making a few tweaks, this is the result I had for the main post content section:</p>
-<p><img src="https://i.imgur.com/4QMOKdr.png" alt="Hugo post content"></p>
-<h2 id="hosting-on-github-pages">Hosting on Github Pages</h2>
-<p>I decided to host the site on Github Pages for the following reasons.</p>
-<ol>
-<li>It&rsquo;s free.</li>
-<li>Setup is quick and easy. Just setup your repo to be a Github pages site and you&rsquo;re ready to go.</li>
-<li>Making updates is seamless. New changes are pushed to the repo and automatically reflected on the site.</li>
-</ol>
-<h2 id="final-thoughts">Final thoughts</h2>
-<p>I&rsquo;m still working to modify the theme to my liking, but so far I&rsquo;m happy with the results and ease-of-use. Being able to edit the css directly is much more intuitive than trying to customize a Wordpress theme. Writing articles is simple, as they&rsquo;re just markdown files. I will continue to explore the available options, but Hugo is looking like a good bet for now.</p>
+    <p><code>express.bodyParser()</code> is no longer bundled with express. You can install it using <code>npm i body-parser</code>.</p>
+<h1 id="fixing-the-error">Fixing the error</h1>
+<p>The code below shows how you can include bodyParser, and by extension jsonParser. Then, simply list <code>jsonParser</code> as the second argument in your POST method, and you will no longer have an undefined request body.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">express</span>();
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bodyParser</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;body-parser&#34;</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">jsonParser</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">bodyParser</span>.<span style="color:#a6e22e">json</span>();
 
+<span style="color:#75715e">// POST /endpoint expects JSON body
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">post</span>(<span style="color:#e6db74">&#39;/myendpoint&#39;</span>, <span style="color:#a6e22e">jsonParser</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
+  <span style="color:#75715e">// Use req.body here
+</span><span style="color:#75715e"></span>})
+</code></pre></div>
 </div>
 
         <footer class="post-footer clearfix">
@@ -123,14 +117,14 @@ if (!doNotTrack) {
             <span>Tagged:</span>
             
             
-                <a href="/tags/tooling/">tooling</a>
+                <a href="/tags/javascript/">javascript</a>
             
         </p>
     
 
     <div class="share">
         
-            <a class="icon-twitter" href="https://twitter.com/share?text=Why%20I%27m%20moving%20from%20Wordpress%20to%20Hugo&url=%2fwordpresstohugo%2f"
+            <a class="icon-twitter" href="https://twitter.com/share?text=How%20to%20fix%3a%20Express.js%20Request%20Body%20is%20Undefined&url=%2fexpress-js-req-body-undefined%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fa fa-twitter"></i>
                 <span class="hidden">Twitter</span>
@@ -138,7 +132,7 @@ if (!doNotTrack) {
         
 
         
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fwordpresstohugo%2f"
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fexpress-js-req-body-undefined%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 <i class="fa fa-facebook"></i>
                 <span class="hidden">Facebook</span>
@@ -146,7 +140,7 @@ if (!doNotTrack) {
         
 
         
-            <a class="icon-google-plus" href="https://plus.google.com/share?url=%2fwordpresstohugo%2f"
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=%2fexpress-js-req-body-undefined%2f"
               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
               <i class="fa fa-google-plus"></i>
                 <span class="hidden">Google+</span>
