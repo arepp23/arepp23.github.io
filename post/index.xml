@@ -16,7 +16,8 @@
       <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>/c-check-string-prefix/</guid>
-      <description></description>
+      <description>It&amp;rsquo;s not immediately obvious how to check if a string is a valid prefix of another in C, given the lack of high-level string manipulation tools. Below explains how this can be done.
+Checking the prefix For this function we&amp;rsquo;ll use strncmp which accepts two strings and the maximum number of characters to compare, and returns an int. If the return value is equal to 0, the strings are equal. We can leverage this by checking the size of the prefix string, and calling strncmp using that size.</description>
     </item>
     
     <item>
