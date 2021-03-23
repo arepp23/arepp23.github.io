@@ -5,10 +5,19 @@
     <link>/tags/</link>
     <description>Recent content in Tags on Austin Repp</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>c</title>
+      <link>/tags/c/</link>
+      <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/c/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>javascript</title>
@@ -25,15 +34,6 @@
       <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/marketing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>c</title>
-      <link>/tags/c/</link>
-      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/c/</guid>
       <description></description>
     </item>
     
